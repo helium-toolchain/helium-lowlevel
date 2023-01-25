@@ -1,0 +1,138 @@
+root = true
+
+# all files
+[*]
+
+charset = utf-8
+trim_trailing_whitespace = true
+
+indent_size = tab
+indent_style = tab
+tab_width = 4
+
+end_of_line = crlf
+insert_final_newline = true
+
+[*.cs]
+
+indent_style = tab
+tab_width = 4
+
+end_of_line = crlf
+insert_final_newline = true
+
+dotnet_separate_import_directive_groups = true
+dotnet_sort_system_directives_first = true
+csharp_style_namespace_declarations = file_scoped:error
+csharp_using_directive_placement = inside_namespace:error
+
+dotnet_style_qualification_for_event = true:silent
+dotnet_style_qualification_for_field = true:silent
+dotnet_style_qualification_for_method = true:silent
+dotnet_style_qualification_for_property = true:silent
+
+dotnet_style_predefined_type_for_locals_parameters_members = false:suggestion
+dotnet_style_predefined_type_for_member_access = false:suggestion
+
+dotnet_style_parentheses_in_arithmetic_binary_operators = always_for_clarity:silent
+dotnet_style_parentheses_in_other_binary_operators = always_for_clarity:silent
+dotnet_style_parentheses_in_other_operators = always_for_clarity:silent
+dotnet_style_parentheses_in_relational_binary_operators = always_for_clarity:silent
+
+dotnet_style_require_accessibility_modifiers = always:suggestion
+
+dotnet_style_coalesce_expression = true:suggestion
+dotnet_style_collection_initializer = true:suggestion
+dotnet_style_explicit_tuple_names = true:suggestion
+dotnet_style_null_propagation = true:suggestion
+dotnet_style_object_initializer = true:suggestion
+dotnet_style_prefer_auto_properties = true:silent
+dotnet_style_prefer_conditional_expression_over_assignment = true:silent
+dotnet_style_prefer_conditional_expression_over_return = true:silent
+dotnet_style_prefer_inferred_anonymous_type_member_names = true:suggestion
+dotnet_style_prefer_inferred_tuple_names = true:suggestion
+dotnet_style_prefer_is_null_check_over_reference_equality_method = true:suggestion
+dotnet_style_prefer_simplified_boolean_expressions = true:suggestion
+dotnet_style_prefer_simplified_interpolation = true:suggestion
+
+dotnet_style_readonly_field = true:suggestion
+dotnet_code_quality_unused_parameters = all:silent
+dotnet_remove_unnecessary_suppression_exclusions = none:silent
+
+csharp_new_line_before_catch =true
+csharp_new_line_before_else =true
+csharp_new_line_before_finally =true
+csharp_new_line_before_members_in_anonymous_types = true
+csharp_new_line_before_members_in_object_initializers = true
+csharp_new_line_before_open_brace = all
+csharp_new_line_between_query_expression_clauses = true
+
+# Naming rules
+
+dotnet_naming_rule.interface_begins_with_i.severity = error
+dotnet_naming_rule.interface_begins_with_i.symbols = interface
+dotnet_naming_rule.interface_begins_with_i.style = begins_with_i
+
+dotnet_naming_rule.types_pascal_case.severity = error
+dotnet_naming_rule.types_pascal_case.symbols = types
+dotnet_naming_rule.types_pascal_case.style = pascal_case
+
+dotnet_naming_rule.base_class.severity = warning
+dotnet_naming_rule.base_class.symbols = abstract
+dotnet_naming_rule.base_class.style = abstract_class
+
+dotnet_naming_rule.private_methods.severity = warning
+dotnet_naming_rule.private_methods.symbols = private_method
+dotnet_naming_rule.private_methods.style = private_method
+
+dotnet_naming_rule.non_field_members.severity = warning
+dotnet_naming_rule.non_field_members.symbols = non_field_members
+dotnet_naming_rule.non_field_members.style = pascal_case
+
+# Symbol specifications
+
+dotnet_naming_symbols.interface.applicable_kinds = interface
+dotnet_naming_symbols.interface.applicable_accessibilities = public, internal, private, protected, protected_internal, private_protected
+dotnet_naming_symbols.interface.required_modifiers =
+
+dotnet_naming_symbols.private_method.applicable_kinds = method
+dotnet_naming_symbols.private_method.applicable_accessibilities = private, protected, private_protected
+dotnet_naming_symbols.private_method.required_modifiers =
+
+dotnet_naming_symbols.types.applicable_kinds = class, struct, interface, enum
+dotnet_naming_symbols.types.appplicable_accessibilities = public, internal, private, protected, protected_internal, private_protected
+dotnet_naming_symbols.types.required_modifiers =
+
+dotnet_naming_symbols.non_field_members.applicable_kinds = property, event, method
+dotnet_naming_symbols.non_field_members.applicable_accessibilities = public, internal, protected_internal
+dotnet_naming_symbols.non_field_members.required_modifiers =
+
+dotnet_naming_symbols.abstract.applicable_kinds = class
+dotnet_naming_symbols.abstract.applicable_accessibilities = *
+dotnet_naming_symbols.abstract.required_modifiers = abstract
+
+# Naming styles
+
+dotnet_naming_style.pascal_case.required_prefix =
+dotnet_naming_style.pascal_case.required_suffix =
+dotnet_naming_style.pascal_case.word_separator =
+dotnet_naming_style.pascal_case.capitalization = pascal_case
+
+dotnet_naming_style.begins_with_i.required_prefix = I 
+dotnet_naming_style.begins_with_i.required_suffix =
+dotnet_naming_style.begins_with_i.word_separator =
+dotnet_naming_style.begins_with_i.capitalization = pascal_case
+
+dotnet_naming_style.private_method.required_prefix =
+dotnet_naming_style.private_method.required_suffix =
+dotnet_naming_style.private_method.word_separator =
+dotnet_naming_style.private_method.capitalization = camel_case
+
+dotnet_naming_style.abstract_class.required_prefix = Abstract
+dotnet_naming_style.abstract_class.required_suffix = 
+dotnet_naming_style.abstract_class.word_separator =
+dotnet_naming_style.abstract_class.capitalization = pascal_case
+
+[*.json]
+
+indent_style = tab
